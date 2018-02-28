@@ -5,33 +5,46 @@ import style from './style';
 import style_iphone from '../button/style_iphone';
 // import jquery for API calls
 import $ from 'jquery';
-// import the Button component
+
+// import Components Here
 import Button from '../button';
+import List from '../list';
 
 export default class Iphone extends Component {
-//var Iphone = React.createClass({
 
 	// a constructor with initial set states
 	constructor(props){
 		super(props);
 		// temperature state
 		this.state.temp = "";
+		this.state.city = "Tokyo";
 		// button display state
-		this.setState({ display: true });
-	}
+		this.setState({ display: true});
+		this.state = {value: 'London'};	
+		this.handleChange = this.handleChange.bind(this);
 
-	// a call to fetch weather data via wunderground
-	fetchWeatherData = () => {
-		// API URL with a structure of : ttp://api.wunderground.com/api/key/feature/q/country-code/city.json
-		var url = "http://api.wunderground.com/api/c78f1a13d2ca6971/conditions/q/UK/London.json";
+		var url = "http://api.wunderground.com/api/47de2e10eee1884d/conditions/q/Spain/Madrid.json";
+		
 		$.ajax({
 			url: url,
 			dataType: "jsonp",
 			success : this.parseResponse,
 			error : function(req, err){ console.log('API call failed ' + err); }
 		})
-		// once the data grabbed, hide the button
-		this.setState({ display: false });
+	}
+
+	// a call to fetch weather data via wunderground
+	handleChange(event) {
+		this.setState({value: event.target.value});
+		var url = "http://api.wunderground.com/api/47de2e10eee1884d/conditions/q/Spain/" + this.state.value + ".json";
+		
+		$.ajax({
+			url: url,
+			dataType: "jsonp",
+			success : this.parseResponse,
+			error : function(req, err){ console.log('API call failed ' + err); }
+		})
+		
 	}
 
 	// the main render method for the iphone component
@@ -49,8 +62,9 @@ export default class Iphone extends Component {
 				</div>
 				<div class={ style.details }></div>
 				<div class= { style_iphone.container }> 
-					{ this.state.display ? <Button class={ style_iphone.button } clickFunction={ this.fetchWeatherData }/ > : null }
+					<List triggerChange={this.handleChange} cityValue={this.state.value}/>
 				</div>
+				
 			</div>
 		);
 	}
