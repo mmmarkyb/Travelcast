@@ -1,12 +1,12 @@
 // import preact
 import { h, render, Component } from 'preact';
-	
+//{items.map((items, i) => <option value={items}>{items}</option>)}
 export default class List extends Component {
 	//Constructor setting up initial list values
 	constructor(props) {
 		super(props);
-		this.state = {value: 'London'};	
 		this.handleChange = this.handleChange.bind(this);
+		console.log(this.props.citiesArray);		
 	}
 
 	//What happens when we change the value?
@@ -15,19 +15,18 @@ export default class List extends Component {
 	}
 
 	//Render the list
-	render() {
+	render() {	
+		let items = this.props.citiesArray;
+
 		return (
 			<div>
 				<form>
 					<select value={this.props.cityValue} onChange={this.props.triggerChange} >
-						<option value="Bilbao">Bilbao</option>
-						<option value="Valencia">Valencia</option>
-						<option value="Barcelona">Barcelona</option>
-						<option value="Madrid">Madrid</option>
+						{items.map((items, i) => <option value={items}>{items}</option>)}
 					</select>
 					<h1>{this.props.cityValue}</h1>
 				</form>
 			</div>
-		);
+		);	
 	}
 }
