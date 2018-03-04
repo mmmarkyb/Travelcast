@@ -1,0 +1,256 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Travelcast Components</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      font-family: "Helvetica Neue", Arial;
+    }
+    hr{
+      padding: 40px;
+      border: none;
+    }
+    body{
+      background: #FAFAFA;
+      margin: 40px;
+    }
+    #toggleContainer {
+      width: 124px;
+      height: 44px;
+    }
+    #toggleContainer:hover{
+      cursor: pointer;
+    }
+    #toggleBody {
+      display: block;
+      float: right;
+      margin: 6px 16px 6px 0;
+      width: 51px;
+      height: 31px;
+      border-radius: 16px;
+    }
+    .toggleBodyOn{
+      background: #FF9B37;
+      border:  none;
+    }
+    .toggleBodyOff{
+      background: white;
+      border: 1.5px solid rgba(0,0,0,0.10);
+      outline-offset: -1.5px;
+    }
+    #toggleKnob{
+      background: white;
+      border: 0.5px solid rgba(0,0,0,0.10);
+      box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.05), 0px 2px 2px 0px rgba(0,0,0,0.10), 0px 3px 3px 0px rgba(0,0,0,0.05) ;
+      border-radius: 100%;
+      width: 28px;
+      height: 28px;
+      margin: 1px;
+      position: relative;
+    }
+
+    button{
+      width: 340px;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      background: #FF9B37;
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.10);
+    }
+    button:hover{
+      cursor: pointer;
+    }
+
+    #dataDisplay{
+      width: 340px;
+      height: 157px;
+      box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.10);
+      border-radius: 4px;
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #dataDisplay > div {
+      width: calc(50% - 32px);
+      padding: 16px;
+    }
+    #dataDisplay > div:last-child{
+      width: 100%;
+      flex-grow: 2;
+      padding: 0;
+      border-top: 0.5px solid rgba(0,0,0,0.10);
+      padding-top: 12px;
+    }
+    #data h1, #bannerData h1{
+      font-size: 48px;
+    }
+    #data p{
+      font-size: 14px;
+      color: rgba(0,0,0,0.75);
+    }
+    #icon img, #bannerCondition img{
+      width: 90px !important;
+      height: 90px !important;
+      display: block;
+      float: right;
+    }
+    #metrics{
+      height: 24px;
+      display: flex;
+      justify-content: space-around;
+    }
+    #metrics > div {
+      display: flex;
+    }
+    #metrics img {
+      width: 12px;
+      height: 12px;
+      margin-right: 4px;
+    }
+    #metrics p {
+      line-height: 12px;
+    }
+
+    #banner{
+      background: linear-gradient(225deg, #56abf3, #053a85);
+      width: 376px;
+      height: 250px;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      transition: height 0.5s ease-in-out;
+      box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.20);
+    }
+    #banner > div {
+      width: calc(50% - 48px);
+      margin: 24px;
+    }
+    #banner > div:first-child, #banner > div:last-child {
+      height: 46px;
+      width: 100%;
+      display: flex;
+      margin: 0;
+    }
+    #bannerNav {
+      margin: 0 24px 16px 24px !important;
+    }
+    #bannerNav p {
+      flex-grow: 2;
+      text-align: center;
+    }
+    #bannerData p {
+      font-size: 14px;
+      color: rgba(255,255,255, 0.75);
+    }
+    #bannerHead p, #bannerNav p {
+      line-height: 46px;
+    }
+    #banner img {
+      height: 46px;
+      width: 46px;
+    }
+
+    input, #dateInput{
+      width: calc(311px - 16px);
+      height: 50px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 5px;
+      background: white;
+      font-size: 24px;
+      color: rgba(0,0,0,0.60);
+      font-weight: 200;
+      padding-left: 16px;
+      line-height: 50px
+    }
+    #dateInput{
+      color: rgba(0,0,0,0.35);
+    }
+    #dateInput:hover{
+
+      cursor: pointer;
+    }
+    .inputInactive{
+      background: #fafafa;
+      border: 1px solid #fafafa;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="toggleContainer" onclick="toggleButton()">
+    <div id="toggleBody" class="toggleBodyOn">
+      <div id="toggleKnob" style="float: right;"></div>
+    </div>
+  </div>
+  <label id="toggleValue">1</label>
+
+  <hr/>
+
+  <input type="text" id="city" class="inputInactive" name="city" value="" placeholder="City">
+
+  <hr/>
+
+  <div id="dateInput">Date</div>
+
+  <hr/>
+
+  <button>Go</button>
+
+  <hr/>
+
+  <div id="dataDisplay">
+    <div id="data">
+      <p>Avg</p>
+      <h1>4&#8451;</h2>
+      <p>Feels Like 5&#8451;</p>
+    </div>
+    <div id="icon"><img src="" title="Condition Icon"/></div>
+    <div id="metrics">
+      <div><img src="" title="Chance of Rain"/><p class="textMetric">56%</p></div>
+      <div><img src="" title="Wind Speed"/><p class="textMetric">12mph</p></div>
+      <div><img src="" title="High Temp"/><p class="textMetric">5&#8451;</p></div>
+      <div><img src="" title="Low Temp"/><p class="textMetric">2&#8451;</p></div>
+    </div>
+  </div>
+
+  <hr/>
+
+  <div id="banner">
+    <div id="bannerHead"><img src="images/logo.png" title="Travelcast Icon"/><p>Travelcast</p></div>
+    <div id="bannerData">
+      <p>London, UK</p>
+      <p id="date"></p>
+      <h1>4&#8451;</h2>
+      <p>Feels Like 5&#8451;</p></div>
+    <div id="bannerCondition">
+      <img src="" title="Condition Icon"/>
+    </div>
+    <div id="bannerNav">
+      <img src="images/leftChevron.png" title="leftChev" style="opacity:0;"/>
+      <p>Today</p>
+      <img src="images/rightChevron.png" title="rightChev" style="opacity:1;"/>
+    </div>
+  </div>
+
+  <hr/>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
