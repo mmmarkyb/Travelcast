@@ -1,0 +1,25 @@
+.filter {
+    width: calc(100% - 32px);
+    height: 40px;
+    display: flex;
+    margin: 16px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.filter button {
+    width: 50px;
+    height: 32px;
+    border: 1px solid orange;
+    background: #FAFAFA;
+    border-radius: 4px;
+    color: black;
+}
+.filter button:hover {
+    background: darkorange;
+    cursor: pointer;
+}
+.filter .active{
+    border: none;
+    background: orange;
+    color: white;
+}

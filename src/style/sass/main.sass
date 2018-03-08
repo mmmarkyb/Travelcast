@@ -1,0 +1,29 @@
+/* Import mixins + variables */
+@import 'variables'
+@import 'bourbon'
+
+/* Main Element and App Styles */
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: $travelcastFont
+
+.App
+    width: 375px
+    height: 667px
+    overflow: scroll
+    display: block
+    margin: 0 auto
+    border: $borderStyle
+    background: $offWhite
+
+/* Import all styles for Banner components */
+@import '../../components/Banner/style'
+
+/* Import all styles for Search components */
+@import '../../components/Search/style'
+
+/* Import all styles for Result components */
+@import '../../components/Result/style'

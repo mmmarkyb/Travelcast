@@ -1,0 +1,264 @@
+@font-face {
+    font-family: SanFranciscoText;
+    src: url(fonts/SanFranciscoText-Regular.otf);
+}
+
+@font-face {
+    font-family: SanFranciscoText-SemiboldItalic;
+    src: url(fonts/SanFranciscoText-SemiboldItalic.otf);
+}
+
+.goButton{
+	position: relative;
+	top: 10px;
+}
+
+.changeButton{
+	width: 140px;
+	display: block;
+	float: right;
+}
+
+.bookButton{
+	position: relative;
+	top: 40px;
+}
+
+.citystyle{
+	z-index: 2;
+  padding-top: 15px;
+}
+
+.countrystyle{
+	z-index: 2;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	font-family: SanFranciscoText;
+	background: #fafafa;
+	color: #fff;
+	width: 414px;
+	height: 736px;
+	text-align: center;
+	padding-top: 0px;
+	margin: 0 auto;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.details {
+	flex: 4;
+}
+
+.city {
+	flex: 1;
+	font-size: 1.7em;
+	font-weight: 400;
+}
+
+.conditions {
+	flex: 1;
+	font-size: 1em;
+}
+.temperature {
+	flex: 2;
+	margin-top: 0;
+	font-size: 4.8em;
+	font-weight: 300;
+	letter-spacing: -5px;
+
+}
+.filled:after {
+	content: "°";
+	margin: 0 0 0 1rem;
+	font-size: 0.5em;
+	font-weight: 100;
+	display: inline-block;
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+.degrees {
+	margin: 0 0 0 1rem;
+	font-size: 0.5em;
+	font-weight: 100;
+	display: inline-block;
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+.box {
+	background-color: white;
+	position: relative;
+	width: 384px;
+	height: 48%;
+	border-radius: 10px;
+	top: 15px;
+	padding-bottom: 20px;
+	margin-left: 15px;
+}
+
+.box p {
+	text-align: left;
+	margin-left: 10%;
+	color: black;
+	font-family: Arial;
+}
+
+.col_mp:hover{
+    color:white;
+    background-color: #f5a55d !important;
+    cursor: pointer;
+  }
+
+  .selected_date_mp{
+    font-size:16px;
+    color:#f5a55d;
+    font-weight: bold;
+}
+
+.selected_date_mp:hover{
+	background-color: white;
+	color: #f5a55d !important;
+	cursor: default;
+ }
+
+.results{
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	font-family: SanFranciscoText;
+	background: #FAFAFA;
+	color: #fff;
+	width: 414px;
+	height: 736px;
+	text-align: center;
+	padding-top: 0px;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.results-box {
+	background-color: white;
+	width: 384px;
+	height: 32%;
+	border-radius: 10px;
+	margin-left: 15px;
+}
+
+.results-box p {
+	text-align: left;
+	margin-left: 10%;
+	color: black;
+	font-family: Arial;
+	}
+	
+.results-sketch {
+	margin-top:5%;
+	position: absolute;
+}
+
+.minibanner {
+margin-top: 0px;
+}
+
+.date, .details-box, .box, .results-box, .goActualButton{
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+}
+
+.date {
+	background-color: white;
+	width: 384px;
+	height: 9%;
+	border-radius: 10px;
+	margin-left: 15px;
+}
+
+.date p {
+	color: black;
+	text-align: left;
+	margin: 0 0 0 5%;
+	font-size: 20px;
+	width: 60%;
+	line-height: 65px;
+}
+
+.suggestionsText{
+	color: black;
+	width: 50%;
+	position: absolute;
+	left: 20px;
+	line-height: 32px;
+	z-index: 1;
+	font-family: SanFranciscoText;
+}
+
+.suggestionsButton{
+	position: relative;
+	top: 35px;
+	left: 120px;
+}
+
+.month{
+	position: relative;
+	top: 20px;
+	color: #000000;
+}
+
+.suggestionsContainer{
+	z-index: 3;
+	font-family: SanFranciscoText;
+	background: #FAFAFA;
+	color: black;
+	width: 414px;
+	height: 736px;
+	padding-top: 0px;
+	position: absolute;
+	overflow-y: scroll;
+}
+
+.details-box {
+	background-color: white;
+	width: 384px;
+	height: 29%;
+	border-radius: 10px;
+	margin: 16px 0 16px 15px;
+}
+
+.details-sketch {
+	margin: 20px 8px;
+	position: absolute;
+}
+
+.loadingScreen{
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	font-family: SanFranciscoText;
+	background-image: url('assets/backgrounds/clear-iphone.jpg');
+	color: #fff;
+	width: 414px;
+	height: 736px;
+	text-align: center;
+	padding-top: 0px;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.date, .results-box, .details-box {
+	margin-top: 16px;
+}
+
+.filter {
+    width: calc(100% - 32px);
+    height: 40px;
+    display: flex;
+    margin: 16px auto;
+    justify-content: space-around;
+    align-items: center;
+}
