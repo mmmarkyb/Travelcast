@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 
 // import stylesheets for ipad & button
 import './style.css';
-import './style/css/main.css';
 
 //Import registerServiceWorker
 import registerServiceWorker from './registerServiceWorker';
@@ -65,7 +64,7 @@ let serverDataHot = {
 	}
   }  
 
-class Iphone extends React.Component {
+class App extends React.Component {
 /*=============================================================================================================
 //                CONSTRUCTOR - Setting Initial States, Binding events and Parsing Data
 /=============================================================================================================*/
@@ -81,7 +80,7 @@ class Iphone extends React.Component {
 			defaultCountry: 'United Kingdom',
 			showStore: false,
 			showSuggestionBox: false,
-			api: '543ce783f356ea80',
+			api: 'd1f5e81ef46e4cbe',
 			disabledList: false,
 			userDate: "Today",
 			switched: false,
@@ -300,7 +299,7 @@ class Iphone extends React.Component {
 					<div className="countrystyle">
 						<WhereList triggerChange={this.changeCountry} countryValue={this.state.country} disabledList={this.state.disabledList}/>
 					</div>
-					<div className="citystyle">
+					<div className="citystyle" style={{'z-index': 2}}>
 						<WhereListCities triggerChange={this.handleChange} cityValue={this.state.value} countryValue={this.state.country} citiesArray={this.state.plac} disabledList={this.state.disabledList}/>
 					</div>
 					<div className="month">
@@ -606,4 +605,4 @@ class Iphone extends React.Component {
 	}
 }
 
-export default Iphone;
+export default App;

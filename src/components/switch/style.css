@@ -1,12 +1,12 @@
+/* Styles for back button */
 .backButton{
-    width: 150px;
-    height: 50px;
-    border: none;
-    font-size: 15px;
-    color: #FF9B37;
-    background: none;
-  }
-  
-  .backButton:hover{
-    cursor: pointer;
-  }
+  width: 150px;
+  height: 50px;
+  border: none;
+  font-size: 15px;
+  color: #FF9B37;
+  background: none;
+}
+.backButton:hover{
+  cursor: pointer;
+}

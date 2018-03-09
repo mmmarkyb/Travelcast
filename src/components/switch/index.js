@@ -1,7 +1,9 @@
+/* Import all dependencies */
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Switch from 'react-toggle-switch'
  
+/* Define and render SuggestionsSwitch component */
 export default class SwitchSuggestions extends Component {
   constructor(props) {
     super(props);

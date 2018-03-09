@@ -1,0 +1,55 @@
+/* Import all styles for Result components */
+.dataDisplay {
+    width: calc(100% - 32px);
+    height: 157px;
+    margin: 16px auto;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.dataDisplay > div {
+    width: calc(50% - 32px);
+    padding: 16px;
+}
+.dataDisplay > div:last-child {
+    width: 100%;
+    flex-grow: 2;
+    padding: 0;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding-top: 16px;
+}
+.dataDisplay p, .dataDisplay h3 {
+    margin: 0;
+    text-align: left;
+}
+.dataDisplay h3 {
+    font-size: 38px;
+}
+.dataDisplay p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.75);
+}
+.icon img {
+    height: 90px;
+    width: 90px;
+    display: block;
+    float: right;
+}
+.metrics {
+    height: 24px;
+    display: flex;
+    justify-content: space-around;
+}
+.metrics div {
+    display: flex;
+}
+.metrics img {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+.metrics p {
+    line-height: 12px;
+}

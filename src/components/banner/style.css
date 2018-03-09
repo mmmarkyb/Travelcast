@@ -1,45 +1,39 @@
 .banner{
-    background: linear-gradient(225deg, #56abf3, #053a85);
-    width: 376px;
-    height: 250px;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-    transition: height 0.5s ease-in-out;
-    box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.20);
-  }
-
-  .banner > div {
-    width: calc(50% - 48px);
-    margin: 24px;
-  }
-  .banner > div:first-child, #banner > div:last-child {
-    height: 46px;
-    width: 100%;
-    display: flex;
-    margin: 0;
-  }
-
-  .bannerNav {
-    margin: 0 24px 16px 24px !important;
-  }
-
-  .bannerNav p {
-    flex-grow: 2;
-    text-align: center;
-  }
-
-  .bannerData p {
-    font-size: 14px;
-    color: rgba(255,255,255, 0.75);
-  }
-
-  .bannerHead p, .bannerNav p {
-    line-height: 46px;
-  }
-  
-  .banner img {
-    height: 46px;
-    width: 46px;
-  }
+  background: linear-gradient(225deg, #56abf3, #053a85);
+  width: 376px;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  transition: height 0.5s ease-in-out;
+  box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.20);
+}
+.banner > div {
+  width: calc(50% - 48px);
+  margin: 24px;
+}
+.banner > div:first-child, #banner > div:last-child {
+  height: 46px;
+  width: 100%;
+  display: flex;
+  margin: 0;
+}
+.bannerNav {
+  margin: 0 24px 16px 24px !important;
+}
+.bannerNav p {
+  flex-grow: 2;
+  text-align: center;
+}
+.bannerData p {
+  font-size: 14px;
+  color: rgba(255,255,255, 0.75);
+}
+.bannerHead p, .bannerNav p {
+  line-height: 46px;
+}
+.banner img {
+  height: 46px;
+  width: 46px;
+}

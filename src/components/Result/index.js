@@ -1,9 +1,12 @@
+/* Import all dependencies */
 import React, { Component } from 'react';
+import './style.css';
 import rain from './img/rain.png';
 import wind from './img/wind.png';
 import high from './img/high.png';
 import low from './img/low.png';
 
+/* Define and render Results component */
 export default class Result extends Component {
     render(){
       return(

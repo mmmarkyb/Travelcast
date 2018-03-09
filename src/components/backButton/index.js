@@ -1,3 +1,4 @@
+/* Import all dependencies */
 import React, { Component } from 'react'
 import "./style.css"
 

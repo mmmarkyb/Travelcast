@@ -1,10 +1,13 @@
+/* Import all dependencies */
 import React, { Component } from 'react'
 import './style.css';
 
+/* Define and render Banner component */
 export default class Banner extends Component {
   state = {};
 
   handleChange = ({ option }) => {
+
     this.setState({
       selectedOption: option
 		})

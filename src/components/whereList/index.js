@@ -1,18 +1,20 @@
+/* Import all dependencies */
 import React, { Component } from 'react'
 import { PowerSelect } from 'react-power-select'
-//import 'react-power-select/dist/react-power-select.css'
-import "./style.css"
+import "../listMonths/style.css"
 
+/* Define and render Where List component */
 export default class WhereList extends Component {
   state = {};
 
   handleChange = ({ option }) => {
     this.setState({
       selectedOption: option
-	})
+		})
   }
 
   render() {
+
 	const countries = ["Afghanistan","Albania","Algeria","Angola", "Antigua & Barbuda","Argentina","Armenia",
 	"Australia","Austria","Azerbaijan","Bahamas", "Bangladesh","Barbados","Belarus","Belgium","Belize","Benin",
 	"Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria",
@@ -37,14 +39,14 @@ export default class WhereList extends Component {
 	"Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
 
     return (
-	  <div>
-		<PowerSelect className="PowerSelect" 
-		  disabled={this.props.disabledList}
-			options={countries}
-			selected={this.props.countryValue}
-			onChange={this.props.triggerChange}
-		/>
-	  </div>
+			<div>
+			<PowerSelect className="PowerSelect" 
+				disabled={this.props.disabledList}
+				options={countries}
+				selected={this.props.countryValue}
+				onChange={this.props.triggerChange}
+			/>
+			</div>
     );
   }
 }

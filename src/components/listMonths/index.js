@@ -1,8 +1,11 @@
+/* Import all dependencies */
 import React, { Component } from 'react'
 import { PowerSelect } from 'react-power-select'
 import "./style.css"
 
+/* Define and render Months List component */
 export default class ListMonths extends Component {
+
   state = {};
 
   handleChange = ({ option }) => {

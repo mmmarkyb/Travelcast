@@ -1,7 +1,9 @@
+/* Import all dependencies */
 import Picker from 'react-month-picker'
 import React, { Component } from 'react'
 import "./month-picker.css"
 
+/* Define and render Month Box component */
 export default class MonthBox extends Component {
 render() {
     let pickerLang = {

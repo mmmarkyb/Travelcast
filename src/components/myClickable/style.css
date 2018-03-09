@@ -1,5 +1,5 @@
-
-  .filter button {
+/* Styles for Filter buttons */
+.filter button {
     width: 50px;
     height: 32px;
     border: 1px solid orange;
